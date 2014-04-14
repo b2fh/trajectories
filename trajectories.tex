@@ -1,0 +1,178 @@
+\documentclass[11pt]{article}
+\pdfoutput=1
+\usepackage{jcappub}
+
+\usepackage{graphics,graphicx}
+\usepackage{amsmath,amssymb}
+
+\begin{document}
+
+\title{Primordial Potential Reconstruction Constrained by a Measured Tensor Amplitude and the Preheating Regime}
+\author[a]{J. Richard Bond}
+\author[a,b]{Jonathan Braden}
+\author[c]{Andrei Frolov}
+\author[a]{Zhiqi Huang}
+\author[d]{Pascal Vaudrevange}
+\affiliation[a]{CITA}
+\affiliation[b]{Dept. of Physics, U of T}
+\affiliation[c]{Simon Fraser University}
+\affiliation[d]{Germany}
+
+\emailAdd{bond@cita.utoronto.ca}
+\emailAdd{jbraden@cita.utoronto.ca}
+\emailAdd{frolov@sfu.ca}
+\emailAdd{zqhuang@cita.utoronto.ca}
+
+\abstract{BLAH BLAH}
+
+\date{\today}
+\maketitle
+
+\section{Introduction}
+
+\section{Reconstructing Primordial Trajectories if the Tensor-to-Scalar  is Measured}
+
+\subsection{Scalar Curvature Power Spectrum }
+
+The problem with letting $r$ float. 
+
+\subsection{Acceleration Histories}
+
+\subsection{Inflaton Potential Reconstructions}
+
+\section{Connecting Constrained Potentials in the Observable Range to the Potential in the Heating Regime }
+
+B-modes help to really nail down the form of the potential during the
+inflationary phase.  
+Unfortunately, without a precise model to consider, the inflationary
+dynamics are effectively independent of the reheating dynamics.
+In particular, the inflaton condensate can break up via a variety of
+different mechanisms depending on the ``shape'' of the potential
+(tachyonic/spinodal instability, perturbative decay, amplification of
+additional fields via parametric resonance followed by rescattering,...). 
+The question is then how to relate the inflationary potential to the
+potential at the minimum that is relevant for (p)reheating.
+This seems rather difficult in the general case, since the ``shape'' of the
+potential could change rather dramatically between inflation and
+post-inflationary oscillations.  As some examples, in the single field case
+the potential could be flattened (or steepened) at large field values, or
+there could be a waterfall transition to end inflation.  This allows for a
+large hierarchy between the effective mass of the inflaton during inflation
+and the effective mass of the field as it oscillates.  Therefore, in the
+completely general case it seems unlikely that the inflationary dynamics
+could tell us much about the preheating dynamics.
+
+Roughly, we want to have $P(\{a_i\},\{b_i\}|r)$ (or perhaps
+$P(\{a_i\}|\{b_i\},r)$ for the case that the inflationary part is well
+constrained)
+where the $a_i$'s are some parameters that characterize the minimum of the
+potential, and the $b_i$'s characterize the inflationary part of the
+potential.
+One possible approach is simply to expand the potential in a Taylor series
+around the minimum (including several fields not just the inflaton).
+It might also be interesting to expand in some other set of basis functions
+(Chebychev's, Rational Chebyshev's, etc.).
+This would at least give a definite way to define the coefficients in the
+expansion.
+
+One very unsophisticated take on this would be that a large value of $r$
+means we have some sort of large-field model of inflation (even $m^2\phi^2$
+for example).
+If something like a simple polynomial is a good fit to the data during
+inflation, then it is not unreasonable to consider the implications of
+simply using a Taylor expansion around the minimum of the potential for the
+preheating as well as the inflationary dynamics.
+Naively, I would say this puts us into preheating regime that is described
+by the billiard picture (although this might not be true).
+Since we have a large field model, the effective couplings of the inflaton
+to other fields will be enhanced by $(\phi_{end}/m_{eff})^{power} \sim
+(M_P/m_{eff})^{power}$ and the couplings in the model will have to be very
+small to be in the perturbative regime.
+If this is true, then preheating and the eventual development of
+nonlinearly interacting inhomogeneous fields is the correct description of
+the end of inflation (modelling with some simple decay models isn't), which
+is of course exactly what we've been working on.
+
+The cleanest way to connect the B-mode results to preheating would be to
+just assume that the Higgs is the inflaton (assuming that some appropriate
+non-minimal terms in the Lagrangian or quantum effects allow it to match
+the data).
+Then we at least know all of the interactions as the Higgs is oscillating
+around its minimum (and there are couplings to the gauge bosons of the form
+$g^2h^2Z^2$ so it is not that dissimilar from $\lambda\phi^4 +
+g^2\phi^2\chi^2$ billiards.
+There are a couple papers on Higgs preheating (0812.4624 and 0812.3622),
+but no lattice/nonlinear analysis that I know of.
+Of course, having isocurvature modes in the gauge fields is probably
+severely constrained so this might not be that interesting, and dealing
+with the fermions is nontrivial.
+
+
+\section{Flattening Preheating Potentials via Conformal Transformations}
+
+\begin{equation} V(\phi, \chi) = 1/4 \lambda \phi^4  - 1/2 \xi \phi^2 R  1/2 g^2 \phi^2 \chi^2 \, .
+\end{equation}
+
+Conformal V-flattening as in SBB89, explored there as Higgs inflation with variable Planck mass models. 
+
+The kinetic piece transforms as 
+
+The field going into canonical form is 
+
+The potential is transformed  as 
+
+SBB considered large $\xi$. 
+
+This story was recently picked up by Kallosh and Linde, who considered $\xi = 1/6 -\Delta$, where $\Delta$ is small. 
+
+This should be compared with the heavy field V-flattening described in Dong, Horn, Silverstein, Westphal 2011, with $\phi^{2n}, \ n<1$ 
+via heavy field trough driving light inflaton $V_{eff}$ yielding 
+$r = 8n/(N_I +n/3) 1-ns  = (n+1)/(N_I-n/6)$, as in bh95. These forms are P13 OK
+
+An example is one of the first  monodromy cases considered, SW08, with $p=1/3$. Later the form adopted in  MSW08 had $p=1/2$ and a $ \cos $ term associated with a shift symmetry. Another example is  roulette inflation (Kahler moduli) BKKV, where V-flat appears naturally. 
+ 
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{{{potseq-1}}}
+\caption{Conformally transformed potentials $U(\psi )$ for a sequence of $\xi$, with $\lambda$ fixed. }
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{{{potseq-2}}}
+\caption{Conformally transformed potentials for a sequence of $\xi$, with $\lambda/\xi^2$ fixed. }
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{{{af_phase_portrait_ximinus1_shading_N_phi_pi}}}
+\caption{Phase portrait for the class of conformally flattened potentials considered here, with $\xi = -1$. The shading denotes $\ln a (\phi ,\pi_\phi )$. }
+\end{figure}
+
+\section{Caustics from Ballistic Trajectories}
+
+Development of caustics in ballistic trajectories for
+\begin{equation}
+  \mathcal{L} = \frac{R}{2} - \frac{1}{2}\partial_\mu\phi\partial^\mu\phi - \frac{1}{2}\partial_{\mu}\chi\partial^{\mu}\chi + \xi\phi^2R - \frac{g^2}{2}\phi^2\chi^2
+\end{equation}
+{\bf Double check normalizations and coupling constant definitions}
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{{{mom_zeta0.5}}}
+\caption{Development of caustics for $\xi=0.5$}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{{{mom_zeta1}}}
+\caption{Development of caustics for $\xi=1$}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{{{mom_zeta2}}}
+\caption{Development of caustics for $\xi=2$}
+\end{figure}
+
+\section{Full Lattice Evolution}
+\begin{figure}
+  \includegraphics[width=0.5\linewidth]{{{energy_partition}}}
+  \caption{Distribution of energy between various components for the starobinski model coupled to a second scalar field.  I need to check back in the code to figure out exactly which model and parameters were used here.}
+\end{figure}
+
+\end{document}

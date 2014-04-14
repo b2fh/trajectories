@@ -1,0 +1,16 @@
+From: jbraden <jbraden@cita.utoronto.ca>
+Subject: Re: Phase portrait
+Date: 16 April, 2013 9:21:29 AM EDT
+To: Andrei Frolov <frolov@sfu.ca>, Dick Bond <bond@cita.utoronto.ca>
+
+Plots of a^2H showing the spikes for several choices of the conformal
+coupling $zeta = 0.5,1,2$.  
+Full potential (modulo a sign I need to check on conformal coupling) was
+lambda\phi^2/4 + g^2\phi^2\chi^2/2 + \zeta\phi^2 R, with g^2/lambda=1.875
+and the correct noncanonical kinetic terms were used in the evolution.
+
+The phi field was started from a rough analytic approximation to the end of
+slow-roll, rather than a full numerical determination.  Shouldn't
+qualitatively change anything.  x-axis is the same as Andrei's,
+log(chi_0/phi_0)/\mu_0 T, with m_0T taken to be those in the lambda phi^4
+model with no conformal coupling.
