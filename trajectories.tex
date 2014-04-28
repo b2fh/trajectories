@@ -1,9 +1,10 @@
 \documentclass[11pt]{article}
 \pdfoutput=1
 \usepackage{jcappub}
-
+\usepackage{aas_macros}
 \usepackage{graphics,graphicx}
 \usepackage{amsmath,amssymb}
+\graphicspath{{figures/}}
 
 \begin{document}
 
@@ -23,12 +24,32 @@
 \emailAdd{frolov@sfu.ca}
 \emailAdd{zqhuang@cita.utoronto.ca}
 
-\abstract{BLAH BLAH}
+\abstract{The shapes of the primordial scalar power spectra are the key quantities to unravel the physics of the inflationary epoch. Blahblah...}
 
 \date{\today}
 \maketitle
-\graphicspath{{figures/}}
+
 \section{Introduction}
+
+The cosmic microwave background radiation is a unique window into the physics of energy scales above TeV. Progress towards harvesting its information content has been steady on the experimental side, starting with the COBE experiment \cite{COBE1996}, continuing with balloon borne experiments such as Boomerang \cite{Boomerang2001, Boomerang2003}, ground-based experiments such as ACT \cite{ACT2013, ACT2014}, SPT \cite{SPT2013, SPT2014} and BICEP \cite{BICEP2}, and the satellites WMAP \cite{WMAP9Maps, WMAP9Cosmology} and Planck \cite{Planck2013Overview, Planck2013PowerSpectra, Planck2013Parameters}. They delivered a picture of a universe that is extremely homogeneous: Gaussian fluctuations sit on top of a uniform background of photons that stream to us from the surface of last scattering at redshift about $1100$, with an amplitude of about $10^{-5}$. Decomposing this image of the microwave sky into spherical harmonics shows an angular power spectrum whose features are well understood. Acoustic oscillations in the primordial photon-baryon fluid freeze out at the surface of last scattering, with the photons streaming (almost) freely towards us, showing the familiar acoustic peaks in the angular power spectrum. Their locations and relative amplitudes allow us to infer the energy content of the universe.
+
+While experimental advances have been formidable, the exact properties of microscopic theories responsible for the inflationary period remain elusive. A plethora of different scalar field potentials have been suggested, and many of them are compatible with current observations. From a theoretical perspective, the best that can be said is that there are many scalar fields in string theory. As for their potentials, not much is known. Even though some advances have been made in building models of inflation based on or inspired by string theory \cite{KKLT, Blanco-Pillado:2004ns, Blanco-Pillado:2006he, KKLMMT, CQ, GKP, Silverstein:2008sg}, the vast majority of the string landscape is still unchartered.
+
+The usual approach in inflationary model building is to specify parameterized scalar field potentials motivated by fundamental particle physics, proceed to derive the dynamical histories and compare with cosmic observations model by model using only a few parameters such as the scalar amplitude and spectral index, a ``top--down'' framework. With the increasing emphasis on complex potential landscapes dotted by many local minima with varied structures surrounding them, large ensembles of possible trajectories could arise. Viable trajectories are determined probabilistically, from theoretical ``prior'' information.
+
+Alternatively, one can take a bottom-up approach from the data, whether with very broad error bars, as in anthropic considerations, or of the increasingly high precision sort offered by the Cosmic Microwave Background (CMB) and Large Scale Structure (LSS) observations. Although there is much art in deciding what theoretical priors to impose, based on concepts such as ``baroqueness'' of the effective potentials allowed, it is best to allow the priors to be broadly defined and let the data decide what is allowed and what not. It is a well-trod path in concept and one we develop further in this paper.
+
+Traditionally the inflationary dynamics are described in the slow roll approximation, assuming that the inflaton field rolls slowly (or with small acceleration) down its potential. The observables -- the primordial tensor and scalar power spectra -- can be computed as a function of the slow roll parameters, typically compressed into a restricted set of spectral parameters, such as the scalar amplitude, the tensor-scalar ratio, the scalar power law index, its running and the tensor index. The values of the slow roll parameters, i.e. the parameters of the scalar potential, can thus be inferred using Markov Chain Monte Carlo (MCMC) methods, comparing the model predictions with observations. 
+
+In this paper, we advocate a different approach. Instead of starting off with (a family) of scalar field potentials, we aim at reconstructing the shape of the primordial tensor and scalar power spectra independent of theoretical priors (in the sense of expecting certain shapes of the scalar field potential). Instead, we let observational data almost freely decide the shapes of the power spectra, using two different paradigms. The goal is to reconstruct -- in a model-independentl way -- nontrivial features in the primordial power spectra, if there are any, without imposing strong theoretical priors.
+
+To this end, we consider spectra features produced by some non-standard processes. Examples of such models are particle production during inflation \cite{Barnaby2009a, Barnaby2009b}, cosmological fluctuations from preheating \cite{Bond2009}, and ``curvaton'' models \cite{Linde1996,Lyth2003}. In these models the consistency relation between tensor and scalar spectra breaks down. We hence let the scalar and tensor spectrum vary independently. In order to generate spectra with a finite number of parameters, we have to impose certain smoothing conditions (priors), implicitly defined by the interpolation method. We vary the interpolation method to show that the dependence on the smoothness prior is weak, provided that proper number of knots are used\footnotemark. 
+
+Secondly, we consider spectra produced by single-field inflation with exotic features in the potential that can break down the slow roll approximation. Some extreme examples are discussed in e.g. Ref.~\cite{Starobinsky1998}. For these models we will impose the single field consistency condition, in effect forcing all observables to be derivable from a single real scalar field potential. Once again, we will strive to be agnostic about the shape of the potential. All that we require is an inflationary period. 
+
+\footnotetext{The criterion is that the reduced $\chi^2$ is not significantly smaller than $1$, or expressed in the Bayesian language, the Bayesian evidence is not too low.}
+
+This paper is structured as follows. Blahblah...
 
 \section{Reconstructing Primordial Trajectories if the Tensor-to-Scalar  is Measured}
 
@@ -174,5 +195,11 @@ Development of caustics in ballistic trajectories for
   \includegraphics[width=0.5\linewidth]{{{energy_partition}}}
   \caption{Distribution of energy between various components for the starobinski model coupled to a second scalar field.  I need to check back in the code to figure out exactly which model and parameters were used here.}
 \end{figure}
+
+
+\bibliographystyle{JHEP}  
+\bibliography{trajectories}
+
+
 
 \end{document}
