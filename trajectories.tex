@@ -5,7 +5,7 @@
 \usepackage{graphics,graphicx}
 \usepackage{amsmath,amssymb}
 \graphicspath{{figures/}}
-
+\def \figwidth{0.9\textwidth}
 \begin{document}
 
 \title{Primordial Potential Reconstruction Constrained by a Measured Tensor Amplitude and the Preheating Regime}
@@ -41,7 +41,7 @@ Traditionally the inflationary dynamics are described in the slow-roll approxima
 
 Thanks to the plethora of observational data that are already available today, we can go beyond the simplest models and ask whether a single-field slow-roll model is adequate to describe the data. To answer such a question it is necessary to extend the parameter space with reasonable theoretical motivations. For a broad class of models, the tensor power spectrum remains to be a power-law with a small tilt. This is because the tensor power spectrum, almost model-independently, only depends on the energy scale of inflation, which by definition does not vary much. Observationally, because of the smallness of $B$-mode polarization signature and the limited range of scales where tensor power spectrum can be measured, it is very difficult to measure features in the tensor power spectrum. Thus, it is reasonable to keep the parametrization of tensor power spectrum unchanged. For the future, we might be able to explore the small tilt of tensor power spectrum and test the sinlg-field slow-roll consistency relation. In that case, $n_t$ should be introduced as a free parameter. For the current data, we do not bother to do so as $n_t$ at this stage is far from being measurable to the accuracy of testing the consistency relation. However, while a broader class of inflation models are permitted, the scalar power spectrum, becomes very model-dependent \cite{Linde1996, Starobinsky1998, Lyth2003, Barnaby2009b, Bond2009}. Phenomenologically, back to the early COBE era, a running parameter $n_{\rm run}$ was already introduced as a minimal extension to describe the scale dependence of the tilt of scalar power spectrum \cite{Kosowsky1995}. Theoretically, a tiny running $\lesssim 10^{-3}$ is expected from  single-field slow-roll models. A detectable running $\gtrsim 0.01$ requires a very slow phase-transition over many efolds of inflation, which is not very well motivated. However, if only one or two degrees of freedom are to be added, there is no ``optimal'' or ``universal'' parameterization that can describe a much broader class of models. For this reason, the running parameter remains to be ``the standard extension'' to date. This situation, however, can be changed if we add more degrees of freedom into the parametrization. Because the observable range of cosmological scales is about ten efolds, a function interpolated from about 10 knots can cover most of the features that are not much shaper than one efold in scale. This interpolation method, to be thoroughly explored in this paper, provides an alternative approach to study the primordial power spectra with very little theoretical priors imposed. The philosophy here is to let the data guide our theoretical thoughts.
 
-If we only consider the CMB temperature-temperature (TT) auto-correlation, the immediate problem of allowing an ``arbitrary'' shape of scalar power spectrum is that the tensor contribution to the TT correlation can be mimicked by a scalar power spectrum with proper shape. There is hence a strong degeneracy between the scalar and tensor power spectra. The theoretical prediction of the amplitude of tensor power spectrum varies from $r\sim 10^{-10}$ for many string-motivated small-field models to  $r\sim 0.1$ for large-field models, with the scales in between almost all plausible. Thus, this degeneracy cannot be relieved by a theoretical prior. We need additional data to constrain the tensor power spectrum independently. The recent detection of B-mode polarization in CMB \cite{BICEP2}, although remains to be confirmed by other experiments, casts a light on solving this problem.
+If we only consider the CMB temperature-temperature (TT) auto-correlation, the immediate problem of allowing an ``arbitrary'' shape of scalar power spectrum is that the tensor contribution to the TT correlation can be mimicked by a scalar power spectrum with a proper shape. There is hence a strong degeneracy between the scalar and tensor power spectra. The theoretical prediction of the amplitude of tensor power spectrum varies from $r\sim 10^{-10}$ for many string-motivated small-field models to  $r\sim 0.1$ for large-field models, with the scales in between almost all plausible. Thus, this degeneracy cannot be relieved by imposing a theoretical prior. We need additional data to constrain the tensor power spectrum independently. The recent detection of B-mode polarization in CMB \cite{BICEP2}, although remains to be confirmed by other experiments, casts a light on solving this problem.
 
 This paper is structured as follows. Blahblah...
 
@@ -49,7 +49,11 @@ This paper is structured as follows. Blahblah...
 
 \subsection{Scalar Curvature Power Spectrum }
 
-The problem with letting $r$ float. 
+The CMB temperature-temperature angular power spectrum $C_\ell^{TT}$ from tensor contribution with $r=0.2$ (the central value suggested by BICEP2 \cite{BICEP2}) can be generated by an effective scalar power spectrum shown in Figure~\ref{fig:effps}.
+\begin{figure}
+  \includegraphics[width = \figwidth, trim = 1in 3in 1in 3in]{ten_eff_ps.pdf}
+  \caption{The effective scalar power spectrum that produces the same $C_\ell^{TT}$ as $r=0.2$ tensor power spectrum does. Planck best-fit cosmology is assumed. $\chi_{\rm rec} = 1.394\times 10^{4} {\rm Mpc}$ is the distance to the last scattering surface. The Planck best-fit amplitude of scalar power spectrum $A_s = 2.2\times 10^{-9}$ is used to normalize the power spectrum. \label{fig:effps}}
+\end{figure}
 
 \subsection{Acceleration Histories}
 
