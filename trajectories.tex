@@ -173,13 +173,18 @@ After all, the purpose of doing the ``model-independent'' reconstruction is to o
 \end{enumerate}
 We propose a simple single-field model with potential
 \begin{equation}
-V(\phi) = \frac{1}{2}m^2\phi^2\left[1 + \frac{\mu}{2} (1 + \tanh{\frac{\phi - \phi_c}{\delta\phi}}) \right] \,.
+V(\phi) = \frac{1}{2}m^2\phi^2\left[1 + \frac{\mu}{2} (1 + \tanh{\frac{\phi - \phi_c}{\delta\phi}}) \right] \,. \label{eq:pot}
 \end{equation}
 To map the potential to the scalar and tensor power spectra, we need five parameters: $m$, $\mu$, $\phi_c$, $\delta\phi$ and $N_{\rm inf}$, the number of efolds from the time when $k_{\rm pivot}$ exits the horizon to the end of inflation ($\epsilon = 1$). The scalar and tensor power spectrum can be solved using the following equation:
 \begin{equation}
   \ddot{\mathcal{A}} + f(t) \dot{\mathcal{A}} + \frac{k^2}{a^2} \mathcal{A} - \frac{e^{-2\int^t f(t) dt}}{\mathcal{A}^3}  = 0, \label{eq:pert}
 \end{equation}
 where for scalar $f(t) = 3 H - 2 \frac{\dot H}{H} + 2 \frac{\ddot\phi}{\dot\phi}$ for scalar and $f(t) = 3H$ for tensor. The initial time is chosen such that $aH\ll k$. The initial asymptotic condition (for $k\gg aH$) is $\mathcal{A} \rightarrow \frac{k H }{2\pi a\dot\phi}$ for scalar and $\mathcal{A} \rightarrow \frac{\sqrt{2}k}{\pi a M_p}$ for tensor.  Initial $\dot{\mathcal{A}}$ and the integral constant in $\int^t f(t) dt$ in eq.~\eqref{eq:pert} are fixed by using the initial asymtotic condition.  The final time is chosen such that $aH\gg k$, when $\mathcal{A}$ converges to a constant.  The power spectrum $\Delta^2_{S,T}(k)$ is the square of the converged $\mathcal{A}$.
+
+\begin{figure}
+\includegraphics[width=\figwidth]{bumppower.pdf}
+\caption{The primordial scalar and tensor power spectra for single-field inflation model defined in eq.~\eqref{eq:pot}. The parameters are $m=5.7\times 10^{-6}M_p$, $\mu = 0.1$. \label{fig:bumppower}}
+\end{figure}
 
 \section*{Acknowledgements}
 
