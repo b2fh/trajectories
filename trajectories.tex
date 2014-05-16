@@ -42,7 +42,7 @@ Traditionally the inflationary dynamics are described in the slow-roll approxima
 
 Thanks to the plethora of observational data that are already available today, we can go beyond the simplest models and ask whether a single-field slow-roll model is adequate to describe the data. To answer such a question it is necessary to extend the parameter space with reasonable theoretical motivations. For a broad class of models, the tensor power spectrum remains to be a power-law with a small tilt. This is because the tensor power spectrum, almost model-independently, only depends on the energy scale of inflation, which by definition does not vary much. Observationally, because of the smallness of $B$-mode polarization signature and the limited range of scales where tensor power spectrum can be measured, it is very difficult to measure features in the tensor power spectrum. Thus, it is reasonable to keep the parametrization of tensor power spectrum unchanged. For the future, we might be able to explore the small tilt of tensor power spectrum and test the sinlg-field slow-roll consistency relation. In that case, $n_t$ should be introduced as a free parameter. For the current data, we do not bother to do so as $n_t$ at this stage is far from being measurable to the accuracy of testing the consistency relation. However, while a broader class of inflation models are permitted, the scalar power spectrum, becomes very model-dependent \cite{Linde1996, Starobinsky1998, Lyth2003, Barnaby2009b, Bond2009}. Phenomenologically, back to the early COBE era, a running parameter $n_{\rm run}$ was already introduced as a minimal extension to describe the scale dependence of the tilt of scalar power spectrum \cite{Kosowsky1995}. Theoretically, a tiny running $\lesssim 10^{-3}$ is expected from  single-field slow-roll models. A detectable running $\gtrsim 0.01$ requires a very slow phase-transition over many efolds of inflation, which is not very well motivated. However, if only one or two degrees of freedom are to be added, there is no ``optimal'' or ``universal'' parameterization that can describe a much broader class of models. For this reason, the running parameter remains to be ``the standard extension'' to date. This situation, however, can be changed if we add more degrees of freedom into the parametrization. Because the observable range of cosmological scales is about ten efolds, a function interpolated from about 10 knots can cover most of the features that are not much shaper than one efold in scale. This interpolation method, to be thoroughly explored in this paper, provides an alternative approach to study the primordial power spectra with very little theoretical priors imposed. The philosophy here is to let the data guide our theoretical thoughts.
 
-If we only consider the CMB temperature-temperature (TT) auto-correlation, the immediate problem of allowing an ``arbitrary'' shape of scalar power spectrum is that the tensor contribution to the TT correlation can be mimicked by a scalar power spectrum with a proper shape. There is hence a strong degeneracy between the scalar and tensor power spectra. The theoretical prediction of the amplitude of tensor power spectrum varies from $r\sim 10^{-10}$ for many string-motivated small-field models to  $r\sim 0.1$ for large-field models, with the scales in between almost all plausible. Thus, this degeneracy cannot be relieved by imposing a theoretical prior. We need additional data to constrain the tensor power spectrum independently. The recent detection of B-mode polarization in CMB \cite{BICEP2}, although remains to be confirmed by other experiments, casts a light on solving this problem.
+If we only consider the CMB temperature-temperature (TT) auto-correlation, the immediate problem of allowing an ``arbitrary'' shape of scalar power spectrum is that the tensor contribution to the TT correlation can be mimicked by a scalar power spectrum with a proper shape. There is hence a strong degeneracy between the scalar and tensor power spectra. The theoretical prediction of the amplitude of tensor power spectrum varies from $r\sim 10^{-10}$ for many string-motivated small-field models to  $r\sim 0.1$ for large-field models, with the scales in between almost all plausible. Thus, this degeneracy cannot be relieved by imposing a theoretical prior. We need additional data to constrain the tensor power spectrum independently. The recent detection of B-mode polarization in CMB \cite{BICEP2}, although remains to be confirmed by other experiments, casts a light on solving this problem. 
 
 This paper is structured as follows. Blahblah...The reduced Planck mass is denoted as $M_p\equiv 1/\sqrt{8\pi G}$, where $G$ is Newton's gravitational constant.We use FRW metric $ds^2 = -dt^2 + a^2(t) d\mathbf{x}^2$. The Hubble parameter $H$ is defined as $H\equiv \frac{\dot a}{a}$, where a dot represents derivative with respect to the cosmological time $t$.
 
@@ -54,8 +54,9 @@ The CMB temperature-temperature angular power spectrum $C_\ell^{TT}$ from tensor
 
 
 \begin{figure}
-  \includegraphics[width = \figwidth, trim = 1in 2.9in 1in 2.9in]{ten_eff_ps.pdf}
-  \caption{The effective scalar power spectrum that produces the same $C_\ell^{TT}$ as $r=0.2$ tensor power spectrum would do. Planck best-fit cosmology is assumed. \label{fig:effps}}
+  \centering
+  \includegraphics[width = \figwidth]{ten_eff_ps.pdf}
+  \caption{The effective scalar power spectrum that produces the same $\Delta C_\ell^{TT}$ contribution as a $r=0.2$ tensor power spectrum would do. Planck best-fit cosmology is assumed. \label{fig:effps}}
 \end{figure}
 
 
@@ -63,25 +64,36 @@ We use the public available software CosmoMC \cite{CosmoMC} to do Monte Carlo Ma
 
 A $n$-knots parametrization is constructed by interpolating scalar power spectrum between $n$ knots. In our parametrization,  $A_s$ is still defined as the amplitude of scalar power sepctrum at $k_{\rm pivot}=0.05 {\rm Mpc}^{-1}$. The knots $k_1$, $k_2$, ..., $k_n$ are uniform in $\ln k$, with $k_{\rm pivot}$ being one of the knots $k_{i_p} = k_{\rm pivot}$ ($i_p$ is a fixed integer between $1$ and $n$). Additional $n-1$ parameters are introduced to describe the deviation from scale-invariance. They are defined as $\gamma_i\equiv \Delta^2_S(k_i)/ A_s$, for $i = 1, 2, \ldots, i_p - 1, i_p+1, \ldots, n$.  The choice of $i_p$ and spacing $\delta\ln k \equiv \ln (k_{i+1}/k_i)$ depends on the number of knots. The criterion is that the relevant cosmological scales (roughly from $10^{-4}{\rm Mpc}^{-1}$ to $0.2 {\rm Mpc}^{-1}$) are covered from $k_1$ to $k_n$. For the MCMC runs we assume flat prior on $\ln A_s$ and $\ln \gamma_i$ ($i\neq i_p$). For scales between $k_1$ and $k_n$, we cubic-spline interpolate $\ln (\Delta^2_S(k)/A_s)$ with natural boundary conditions (second derivatives vanish). Whereas for scales beyond, we simply assume $\Delta^2_S(k) = \Delta^2_S(k_1)$ for $k<k_1$ and $\Delta^2_S(k) = \Delta^2_S(k_n)$ for $k>k_n$. As for the tensor power spectrum, we use a parametrization $\Delta^2_T(k) = r A_s (k/k_{\rm pivot})^{n_t}$ with $n_t = -r/8$ enforced. Note that in the literature $r$ is often defined as the tensor-to-scalar ratio at $k=0.002 {\rm Mpc}^{-1}$, slightly different from the $r$ defined here. We do not adopt this convention because with our parametrization, the scalar power at $k=0.002 {\rm Mpc}^{-1}$ is poorly measured, whereas the conventional parametrization extrapolates the scalar power to all scales with a constant $n_s$. In all the runs we use a prior $-2 \le \ln \gamma_i \le 2$ ($i = 1, 2, \ldots, i_p - 1, i_p+1, \ldots, n$). For most of the knots this prior does not matter, as the data only allow a much narrower range of $\ln \gamma_i$. However, for the superhorizon scales $k\lesssim 10^{-4} {\rm Mpc}^{-1}$ and very small scales $k\gtrsim 0.2 {\rm Mpc}^{-1}$ that are not measured by the cosmological data, the prior will dominate the results. 
 
-In Fig~\ref{fig:traj_power} we show the reconstructed scalar power spectrum under different assumptions about $r$. In the prior dominated scales ($k\le 10^{-4} {\rm Mpc}^{-1}$ and $k\gtrsim 0.2 {\rm Mpc}^{-1}$), the trajectories tend to uniformly scan the allowed prior $-2\le \ln \gamma_i\le 2$. In the observable-scale range, however, the trajectories tend to bend down (w.r.t. power-law extrapolation) at $10^{-4} {\rm Mpc}^{-1} \lesssim k \lesssim 0.01 {\rm Mpc}^{-1}$. This tendency is more significant for larger $r$ (either put in by hand or constrained by BICEP2), because a deficit in scalar power at $k\lesssim 0.01 {\rm Mpc}^{-1}$ is needed to cancel the tensor contribution to $C_\ell^{TT}$. As shown in Fig~\ref{fig:traj_cltt},  although the reconstructed scalar power spectra differ significantly between large and small $r$'s cases, the $C_\ell^{TT}$ trajectories remain similar.
-
-The scalar power deficit on large scales does not necessarily come with a simple shape. The spectrum can bend all the way down to superhorizon scales, or have one or two dips. The data on large scales do not have sufficient statistical power to measure the detailed shape. The power deficit in $\Delta_s^2(k)$ is caused by an observed low-$\ell$ power deficit in Planck temperature $C_\ell$ data. We discuss this in Section~\ref{sec:anomaly}.
+In Fig~\ref{fig:traj_power_fixr} we show the reconstructed scalar power spectrum with different fiducial $r$. In the prior dominated scales ($k\le 10^{-4} {\rm Mpc}^{-1}$ and $k\gtrsim 0.2 {\rm Mpc}^{-1}$), the trajectories tend to uniformly scan the allowed prior $-2\le \ln \gamma_i\le 2$. In the observable-scale range, however, the trajectories are not perfectly favoring a power-law shape. They tend to bend down (w.r.t. power-law extrapolation) at $10^{-4} {\rm Mpc}^{-1} \lesssim k \lesssim 0.01 {\rm Mpc}^{-1}$. This tendency is more significant for larger fiducial $r$, because a deficit in scalar power at $k\lesssim 0.01 {\rm Mpc}^{-1}$ is needed to cancel the tensor contribution to $C_\ell^{TT}$. 
 
 \begin{figure}
   \includegraphics[width=\halffigwidth]{nobicep_spline0_p11_r0d02_power_traj.pdf}% 
   \includegraphics[width=\halffigwidth]{nobicep_spline0_p11_r0d1_power_traj.pdf}
   \includegraphics[width=\halffigwidth]{nobicep_spline0_p11_r0d2_power_traj.pdf}%
   \includegraphics[width=\halffigwidth]{nobicep_spline0_p11_r0d5_power_traj.pdf}
-  \caption{The reconstructed power spectrum with $r = 0.02$, $r=0.1$, $r=0.2$, and $r=0.5$ for top-left, top-right, bottom-left, bottom-right panels, respectively. The location of 11 knots used for interpolation are marked with $\Delta$ symbols. Data: Planck + WP + highL + BAO. }
+  \caption{Reconstructed power spectra with fiducial $r = 0.02$, $r=0.1$, $r=0.2$, and $r=0.5$ for top-left, top-right, bottom-left, bottom-right panels, respectively. The location of 11 knots used for interpolation are marked with $\Delta$ symbols. Data: Planck + WP + highL + BAO. \label{fig:traj_power_fixr}}
 \end{figure}
+
+
+Due to the aformentioned degeneracy in the temperature data, if we allow $r$ to vary, the reconstructed scalar power spectrum will be driven by the prior in $r$. Do we have a well motivated prior for $r$? A standard approach in the literature is to use a uniform prior on $r$. This prior has a theoretical motivation {\it only if we assume large-field inflations}. Other pirors such as uniform $\ln r$ or $\sqrt{r}$ are entirely possible if we allow a variety of inflation models. Given that we do not really know the order of magnitude of $r$, it is only possible to discuss the reconstruction of scalar power spectrum under an explicit assumption of $r$ or with other indepedent measurement of $r$ to break the degeneracy. In particular, $r$ can be independently measured using the $B$-mode polarization data. We use the currently available BICEP2 $B$-mode polarization data as an example to show how an independent measurement of $r$ can affect the reconstruction of scalar power spectrum. In Fig~\ref{fig:traj_bnb} we compare the reconstructed power spectra for a flat $0\le r \le 1$ prior, with and without BICEP2. Without BICEP2 constraint, the tensor power spectrum can rise up: $r < 0.60$ at 95.4\% confidence level (CL). This is for the standard 11 knots case. The more degrees of freedom we put into the scalar power spectrum, the better the scalar power deficit can mimic the shape shown in Fig~\ref{fig:effps} and the stronger the degeneracy is. As we increase the number of knots to 15, the upperbound becomes even larger: $ r < 0.65$ at 95.4\% CL. 
+
+\begin{figure}
+  \includegraphics[width = \halffigwidth]{nobicep_spline0_p11_power_trajs.pdf}%
+  \includegraphics[width = \halffigwidth]{spline0_p11_power_trajs.pdf}
+\caption{Reconstructed power spectra with flat prior $0\le r\le 1$: no BICEP2 (left panel) against BICEP2 (right panel). The location of 11 knots used for interpolation are marked with $\Delta$ symbols. Common data sets: Planck + WP + highL + BAO. \label{fig:traj_bnb}}
+\end{figure}
+
+
+Although the reconstructed scalar power spectra differ significantly for different assumptions about the tensor power, we find that, due to the degeneracy between scalar and tensor contributions, the total $C_\ell^{TT}$ remain similar in all cases (fixed fiducial $r$'s and flat prior $r$ with and without BICEP2). In Fig~\ref{fig:traj_cls} we show the similarity of the reconstructed $C_\ell^{TT}$ and the difference in $C_{\ell}^{BB}$, for the cases of flat prior $0\le r \le 1$ with and without BICEP2 constraint. 
 
 \begin{figure}
 \includegraphics[width = \halffigwidth]{nobicep_spline0_p11_dclTT_trajs.pdf}%
 \includegraphics[width = \halffigwidth]{spline0_p11_dclTT_trajs.pdf}
 \includegraphics[width = \halffigwidth]{nobicep_spline0_p11_dclBB_trajs.pdf}%
 \includegraphics[width = \halffigwidth]{spline0_p11_dclBB_trajs.pdf}
-\caption{Reconstructed $C_\ell$ trajectories with $\Lambda$CDM best-fit subtracted: no BICEP2 (left panels) against BICEP2 (right panels). In all panels we have used a free $0\le r\le 1$ prior and Planck + WP + highL + BAO data.  \label{fig:traj_cltt}}
+\caption{Reconstructed $C_\ell$ trajectories with $\Lambda$CDM best-fit subtracted: no BICEP2 (left panels) against BICEP2 (right panels). In all panels we have used a flat prior $0\le r\le 1$ and Planck + WP + highL + BAO data.  \label{fig:traj_cls}}
 \end{figure}
+
 
 \section{The low-$\ell$ Power Deficit \label{sec:anomaly}}
 
@@ -91,8 +103,9 @@ Planck reported a tension between the Planck best-fit $\Lambda$CDM model and the
 In Fig~\ref{fig:dcls} Planck $C_\ell^{TT}$ data are plotted against the best-fit $\Lambda$CDM (without BICEP2 constraint) and $\Lambda$CMD~+~$r$ (with BICEP2 constraint) models to demonstrate the low-$\ell$ power deficit anomaly. A coherent power deficit between $\ell=20$ and $\ell = 30$ can be easily identified by eye. The $C_{\ell}$ data are not perfectly uncorrelated at low-$\ell$, making the understanding of the anomaly sophisticated. However, we can assume a full-sky cosmic-variance limited experiment for an order-of-magnitude estimation. Once an analytic understanding of the anomaly is achieved, we proceed with a more exact MCMC calculation.
 
 \begin{figure}
+  \centering
   \includegraphics[width =\figwidth]{dcl.pdf}
-  \caption{The Planck $C_\ell^{TT}$ data (binned for $\ell \ge 32$) compared to predictions from best-fit models. \label{fig:dcls}}
+  \caption{The Planck low-$\ell$ temperature data compared to predictions from various best-fit models. \label{fig:dcls}}
 \end{figure}
 
 
@@ -109,7 +122,7 @@ In practice the low-$\ell$ data are correlated and the above estimation may not 
   \includegraphics[width = \halffigwidth]{ldip2to30_nrun_dipamp_2D.pdf}
   \includegraphics[width = \halffigwidth]{ldip2to40_nrun_dipamp_2D.pdf}%
   \includegraphics[width = \halffigwidth]{ldip2to19_nrun_dipamp_2D.pdf} 
-  \caption{The 68.3\% CL and 95.4\% CL constraints on $n_{\rm run}$ and $A_{\rm dip}$ for the phenomenological power deficit model. The $\ell$ ranges are: top-left panel 20-30;  top-right panel 2-30; lower-left panel 2-40; lower-right panel 2-19. Data sets: Planck + highL + BICEP2 + BAO. \label{fig:nrunadip}}
+  \caption{The 68.3\% CL and 95.4\% CL constraints on $n_{\rm run}$ and $A_{\rm dip}$ for the phenomenological power deficit model. The $\ell$ ranges are: top-left panel 20-30;  top-right panel 2-30; lower-left panel 2-40; lower-right panel 2-19. Data sets: Planck + WP + highL + BICEP2 + BAO. \label{fig:nrunadip}}
 \end{figure}
 
 
@@ -154,7 +167,7 @@ We show the reconstructed $\epsilon$ and $\ln V/V_{\rm pivot}$ trajectories in F
   \includegraphics[width=\halffigwidth]{nobicep_spline0_p11_r0d1_eps_traj.pdf} 
   \includegraphics[width=\halffigwidth]{nobicep_spline0_p11_r0d2_eps_traj.pdf}% 
   \includegraphics[width=\halffigwidth]{nobicep_spline0_p11_r0d5_eps_traj.pdf}
-  \caption{The reconstructed $\epsilon$ trajectories with $r = 0.02$, $r=0.2$, $r=0.5$ and free $r$ for top-left, top-right, bottom-left, bottom-right panels, respectively. Data: Planck + highL + BAO. \label{fig:traj_eps}}
+  \caption{The 11-knots reconstructed $\epsilon$ trajectories with $r = 0.02$, $r=0.2$, $r=0.5$ and free $r$ for top-left, top-right, bottom-left, bottom-right panels, respectively. Data: Planck + WP + highL + BAO. \label{fig:traj_eps}}
 \end{figure}
 
 
@@ -163,7 +176,7 @@ We show the reconstructed $\epsilon$ and $\ln V/V_{\rm pivot}$ trajectories in F
   \includegraphics[width=\halffigwidth]{nobicep_spline0_p11_r0d1_potential_traj.pdf} 
   \includegraphics[width=\halffigwidth]{nobicep_spline0_p11_r0d2_potential_traj.pdf}
   \includegraphics[width=\halffigwidth]{nobicep_spline0_p11_r0d5_potential_traj.pdf}
-  \caption{The reconstructed potentials with $r = 0.02$, $r=0.1$, $r=0.2$, and $r=0.5$ for top-left, top-right, bottom-left, bottom-right panels, respectively.  Data: Planck + WP + highL + BAO. \label{fig:traj_potential}}
+  \caption{The 11-knots reconstructed potentials with $r = 0.02$, $r=0.1$, $r=0.2$, and $r=0.5$ for top-left, top-right, bottom-left, bottom-right panels, respectively.  Data: Planck + WP + highL + BAO. \label{fig:traj_potential}}
 \end{figure}
 
 After all, the purpose of doing the ``model-independent'' reconstruction is to obtain an idea what kind of models the data are driving us towards. The large-scale power deficit drives us to search for a model that allows deviations from power-law scalar power spectrum, where the deviatioins should be
@@ -190,9 +203,29 @@ where for scalar $f(t) = 3 H - 2 \frac{\dot H}{H} + 2 \frac{\ddot\phi}{\dot\phi}
 To solve the euqation eq.~\eqref{eq:pert} one needs to specify the initial conditions. The initial time is chosen such that $aH\ll k$, where the mode is well inside the horizon and the vacuum asympototic solution is $\mathcal{A} \rightarrow \frac{k H }{2\pi a\dot\phi}$ for scalar and $\mathcal{A} \rightarrow \frac{\sqrt{2}k}{\pi a M_p}$ for tensor.  Initial $\dot{\mathcal{A}}$ and the integral constant in $\int^t f(t) dt$ in eq.~\eqref{eq:pert} are fixed by using the initial asymtotic condition.  The final time is chosen such that $aH\gg k$, when the mode is well outside the horizon and $\mathcal{A}$ converges to a constant.  The power spectrum $\Delta^2_{S,T}(k)$ is the square of the converged $\mathcal{A}$. In Fig~\ref{fig:bumppower} we show a few examples of the scalar and tensor power spectra to demonstrate the variety of shapes of scalar power spectrum. 
 
 \begin{figure}
+\centering
 \includegraphics[width=\figwidth]{bumppower.pdf}
 \caption{The primordial scalar and tensor power spectra for single-field inflation model defined in eq.~\eqref{eq:pot}. \label{fig:bumppower}}
 \end{figure}
+
+For the MCMC run we use flat prior $10^{-6} M_p < m < 10^{-5} M_p$, $0.01 M_p \le \delta\phi\le 0.3 M_p$, $0\le\mu\le 0.5$, $50\le N_{\rm inf} \le 70$. The location of the step, $\phi_c$, is mapped into $\delta N_{\rm step} \equiv \frac{1}{4}(\phi_c^2 - \phi_{\rm pivot}^2)$, which is approximately $ - \ln (k_{\rm step}/k_{\rm pivot})$, $k_{\rm step}$ being the wave number where the dip or osciallating feature is. We use a flat prior $-1 \le N_{\rm step} \le 7$, that is, allowing the feature to be in the range $4.6\times 10^{-5} {\rm Mpc}^{-1} \lesssim k \lesssim 0.14 {\rm Mpc}^{-1}$.
+
+In Fig~\ref{fig:traj_model} we show the posterior power spectra and potential trajctories for this model. Notably, $N_{\rm step}$ is bounded by the data: $N_{\rm step} > 1.2$ at 95.4\% CL, i.e., the scale of the features is at $k<0.015 {\rm Mpc}^{-1}$. 
+
+
+\begin{figure}
+\includegraphics[width=\halffigwidth]{bump_power_trajs.pdf}%
+\includegraphics[width=\halffigwidth]{bump_potential_trajs.pdf}
+\caption{Reconstructed power spectra and potentials trajectories for the single-field inflation model defined in eq.~\eqref{eq:pot}. Data sets: Planck + WP + highL + BAO + BICEP2. \label{fig:traj_model}}
+\end{figure}
+
+\section{Conclusions}
+
+In this paper we studied the bottom-up approach for primordial power spectrum reconstruction. We find that, if only temeprature data is used, the reconstructed scalar power spectrum on large scales ($k\lesssim 0.01 {\rm Mpc}^{-1}$ can be driven by the prior in $r$, due to the degeneracy between scalar and tensor contributions to $C_\ell^{TT}$. We propose explicitly fixing $r$ for the scalar power spectrum reconstructioin, instead of using an {\it ad hoc} prior in $r$ and drawing misleading conclusions. In the presence good-quality polarization data that can break the degeneracy, however, $r$ should be treated as a free parameter.
+
+The reconstructed scalar power deficit on large scales comes with various possible shapes. The spectrum can bend all the way down to superhorizon scales, or have one or two dips. The power deficit is caused by an observed low-$\ell$ power deficit in Planck temperature $C_\ell$ data, which we estimate to be a $\sim 99\%$ CL anomaly. Due to the cosmic variance, the data on large scales do not have sufficient statistical power to measure the detailed shape of the power deficit. Future polarization data and other indepedent cosmological data (such as a large volume galaxy survey) may help to improve the situation.
+
+The simplest single-field inflation models with constant $\epsilon$ are in tension with the scalar power deficit. The large-scale power deficit suggests an up-turning feature in the potential. For parameter study focusing on the power deficit, we propose a simple step potential to accomodate the data without killing variety of possibilities of the shape of the large-scale power deficit.
 
 \section*{Acknowledgements}
 
