@@ -1,0 +1,27 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}
+\BOOKMARK [1][-]{section.2}{Introduction}{}
+\BOOKMARK [1][-]{section.3}{Time-dependent observables}{}
+\BOOKMARK [2][-]{subsection.3.1}{Time evolution of ns and r}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Multifield models}{section.3}
+\BOOKMARK [2][-]{subsection.3.3}{Trajectory functions}{section.3}
+\BOOKMARK [1][-]{section.4}{Markov Chain Monte-Carlo}{}
+\BOOKMARK [1][-]{section.5}{Data Sets}{}
+\BOOKMARK [1][-]{section.6}{Spectral Trajectories}{}
+\BOOKMARK [2][-]{subsection.6.1}{Interpolation between seven knots}{section.6}
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Results for current data}{subsection.6.1}
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Principal Component Analysis}{subsection.6.1}
+\BOOKMARK [3][-]{subsubsection.6.1.3}{Results for forecasts}{subsection.6.1}
+\BOOKMARK [2][-]{subsection.6.2}{Effects of changing the details of the trajectory expansion}{section.6}
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Connection to the standard parameterization}{subsection.6.2}
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Oscillations from too much freedom}{subsection.6.2}
+\BOOKMARK [3][-]{subsubsection.6.2.3}{Tensor power spectrum driven by prior}{subsection.6.2}
+\BOOKMARK [3][-]{subsubsection.6.2.4}{Model selection}{subsection.6.2}
+\BOOKMARK [2][-]{subsection.6.3}{Searching for nontrivial features in the power spectra}{section.6}
+\BOOKMARK [1][-]{section.7}{Single field inflation models}{}
+\BOOKMARK [2][-]{subsection.7.1}{Inflation driven by a single scalar field}{section.7}
+\BOOKMARK [2][-]{subsection.7.2}{All information is in }{section.7}
+\BOOKMARK [2][-]{subsection.7.3}{The \040trajectory and different priors}{section.7}
+\BOOKMARK [2][-]{subsection.7.4}{Reconstructing the potential}{section.7}
+\BOOKMARK [1][-]{section.8}{Summary and Conclusions}{}
+\BOOKMARK [1][-]{appendix.A}{Various function bases}{}
+\BOOKMARK [1][-]{appendix.B}{Implicit Priors of Random Trajectories}{}
